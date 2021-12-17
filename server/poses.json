@@ -1,50 +1,225 @@
 [
   {
-    "name": "Cat Cow",
+    "name": "Child's Pose",
     "description": "Back stretch .....",
-    "bodyPart": "back",
+    "bodyPart": [
+      "back",
+      "legs"
+    ],
     "id": "1",
-    "image": "",
-    "level": "Beginner"
+    "image": "child.png",
+    "level": "beginner"
   },
   {
-    "name": "cobra",
+    "name": "Cobra",
     "description": "Back stretch .....",
-    "bodyPart": ["back"],
+    "bodyPart": [
+      "back",
+      "upper"
+    ],
     "id": "2",
-    "image": "",
-    "level": "Beginner"
+    "image": "cobra.png",
+    "level": "advanced"
   },
   {
-    "name": "triangle",
+    "name": "Triangle",
     "description": "Back stretch .....",
-    "bodyPart": ["legs", "back"],
+    "bodyPart": [
+      "legs",
+      "back",
+      "upper"
+    ],
     "id": "3",
-    "image": "",
-    "level": "Beginner"
+    "image": "triangle.png",
+    "level": "beginner",
+    "repeat": "true"
   },
   {
-    "name": "butterfly",
+    "name": "Knee To Chest",
     "description": "Back stretch .....",
-    "bodyPart": ["legs"],
+    "bodyPart": [
+      "legs"
+    ],
     "id": "4",
-    "image": "",
-    "level": "Beginner"
+    "image": "knee-to-chest",
+    "level": "beginner",
+    "repeat": "true"
   },
   {
     "name": "bridge",
     "description": "Back stretch .....",
-    "bodyPart": ["back"],
+    "bodyPart": [
+      "back"
+    ],
     "id": "5",
     "image": "",
-    "level": "Beginner"
+    "level": "advanced"
   },
   {
     "name": "chair",
     "description": "Back stretch .....",
-    "bodyPart": ["legs", "back"],
+    "bodyPart": [
+      "legs",
+      "back"
+    ],
     "id": "6",
     "image": "",
-    "level": "Beginner"
+    "level": "beginner"
+  },
+  {
+    "name": "Down Dog",
+    "description": "Back stretch .....",
+    "bodyPart": [
+      "legs",
+      "back"
+    ],
+    "id": "7",
+    "image": "down-dog.png",
+    "level": "beginner"
+  },
+  {
+    "name": "Twist",
+    "description": "Back stretch .....",
+    "bodyPart": [
+      "legs",
+      "back"
+    ],
+    "id": "8",
+    "image": "twist.png",
+    "level": "beginner",
+    "repeat": "true"
+  },
+  {
+    "name": "Lying Twist",
+    "description": "Back stretch .....",
+    "bodyPart": [
+      "back"
+    ],
+    "id": "9",
+    "image": "lying-twist.png",
+    "level": "beginner",
+    "repeat": "true"
+  },
+  {
+    "name": "Pigeon",
+    "description": "Back stretch .....",
+    "bodyPart": [
+      "legs"
+    ],
+    "id": "10",
+    "image": "pigeon.png",
+    "level": "advanced",
+    "repeat": "true"
+  },
+  {
+    "name": "Bow",
+    "description": "Back stretch .....",
+    "bodyPart": [
+      "legs",
+      "back",
+      "upper"
+    ],
+    "id": "11",
+    "image": "bow.png",
+    "level": "advanced"
+  },
+  {
+    "name": "Sleeping Hero",
+    "description": "Back stretch .....",
+    "bodyPart": [
+      "back",
+      "legs"
+    ],
+    "id": "12",
+    "image": "sleeping-hero.png",
+    "level": "advanced"
+  },
+  {
+    "name": "Rabbit",
+    "description": "Back stretch .....",
+    "bodyPart": [
+      "back",
+      "upper"
+    ],
+    "id": "13",
+    "image": "rabbit.png",
+    "level": "advanced"
+  },
+  {
+    "name": "Half Fold",
+    "description": "Back stretch .....",
+    "bodyPart": [
+      "back",
+      "legs"
+    ],
+    "id": "14",
+    "image": "half-fold.png",
+    "level": "beginner"
+  },
+  {
+    "name": "Upward Dog",
+    "description": "Back stretch .....",
+    "bodyPart": [
+      "back",
+      "upper"
+    ],
+    "id": "15",
+    "image": "upward-dog.png",
+    "level": "beginner"
+  },
+  {
+    "name": "Wide leg Fold",
+    "description": "Back stretch .....",
+    "bodyPart": [
+      "back",
+      "upper",
+      "legs"
+    ],
+    "id": "16",
+    "image": "wide-leg-fold.png",
+    "level": "advanced"
+  },
+  {
+    "name": "Forward Fold",
+    "description": "Back stretch .....",
+    "bodyPart": [
+      "back",
+      "legs"
+    ],
+    "id": "17",
+    "image": "forward-fold.png",
+    "level": "advanced"
+  },
+  {
+    "name": "Sitting Fold",
+    "description": "Back stretch .....",
+    "bodyPart": [
+      "back",
+      "legs"
+    ],
+    "id": "18",
+    "image": "sitting-fold.png",
+    "level": "advanced"
+  },
+  {
+    "name": "Front Extended",
+    "description": "Back stretch .....",
+    "bodyPart": [
+      "back",
+      "upper"
+    ],
+    "id": "19",
+    "image": "front-extended.png",
+    "level": "advanced"
+  },
+  {
+    "name": "Upward Hand",
+    "description": "Back stretch .....",
+    "bodyPart": [
+      "upper"
+    ],
+    "id": "20",
+    "image": "upward-hand.png",
+    "level": "beginner"
   }
 ]

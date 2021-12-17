@@ -14,7 +14,7 @@ const removeDuplicates = (array) => {
 
 const generateRandomArray = (array) => {
   const randomArray = [];
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 6; i++) {
     const randomNumber = Math.floor(Math.random() * (array.length));
     randomArray.push(array[randomNumber]);
   }
