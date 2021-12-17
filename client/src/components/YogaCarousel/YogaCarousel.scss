@@ -3,8 +3,15 @@
 @use "../../styles/partials/mixin";
 
 .carousel {
+  width: 60%;
+
   &__controls {
     @include mixin.flexbox(row, space-around, center);
     margin-bottom: variables.$pm-base * 2;
+  }
+
+  &__image {
+    width: 200px;
+    border-radius: 5px;
   }
 }

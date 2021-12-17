@@ -30,11 +30,11 @@ function YogaCarousel(props) {
     }
   };
   return (
-    <Carousel autoPlay={isRunning} interval={1000} onChange={handleSlideChange}>
+    <Carousel autoPlay={isRunning} interval={1000} onChange={handleSlideChange} className="carousel">
       {newPoses.map((pose) => {
         return (
           <div key={pose.id}>
-            <img src={`${baseURL}/${pose.image}`} />
+            <img className="carousel__image" src={`${baseURL}/${pose.image}`} alt={pose.name} />
             <p className="legend">{pose.name}</p>
           </div>
         );

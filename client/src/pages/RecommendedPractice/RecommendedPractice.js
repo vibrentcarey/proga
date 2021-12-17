@@ -37,7 +37,7 @@ const RecommendedPractice = () => {
         </section>
       )}
       {isPracticing && (
-        <section>
+        <section className="box__section">
           <YogaCarousel practiceList={data} />
         </section>
       )}

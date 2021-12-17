@@ -5,10 +5,16 @@
 .box {
   background-image: url("../../assets/images/flower.jpg");
   padding: variables.$pm-base * 8 0;
+
+  &__section {
+    @include mixin.flexbox(row, center, center);
+    width: 100%;
+  }
 }
 
 .overview {
   @include mixin.flexbox(column, flex-start, center);
+
   &__btn {
     padding-bottom: variables.$pm-base * 4;
     color: variables.$primary-white;
