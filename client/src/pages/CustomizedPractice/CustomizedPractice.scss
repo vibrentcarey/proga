@@ -1,0 +1,46 @@
+@use "../../styles/partials/variables";
+@use "../../styles/partials/global";
+@use "../../styles/partials/mixin";
+
+.container {
+  background-image: url("../../assets/images/yoga-sunrise.jpg");
+  padding: variables.$pm-base * 8 0;
+}
+
+.form-card {
+  width: 90%;
+  margin: 0 auto;
+  padding: variables.$pm-base * 8 variables.$pm-base * 4;
+}
+
+.cus-form {
+  @include mixin.flexbox(column, flex-start, flex-start);
+  width: 90%;
+  margin: 0 auto;
+
+  &__heading {
+    margin-top: variables.$pm-base * 6;
+    text-align: left;
+  }
+
+  &__level {
+    margin-top: variables.$pm-base * 6;
+  }
+
+  &__btn {
+    color: variables.$primary-black;
+    margin: 0 auto;
+    margin-top: variables.$pm-base * 6;
+    &:hover,
+    &:active {
+      color: variables.$secondary-black;
+    }
+  }
+}
+
+.overview {
+  @include mixin.flexbox(column, flex-start, center);
+  &__btn {
+    padding-bottom: variables.$pm-base * 4;
+  }
+}

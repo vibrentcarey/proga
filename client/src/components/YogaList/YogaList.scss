@@ -1,0 +1,32 @@
+@use "../../styles/partials/variables";
+@use "../../styles/partials/global";
+@use "../../styles/partials/mixin";
+
+.pose-container {
+  margin: 0 auto;
+  width: 90%;
+  @include mixin.flexbox(column, flex-start, center);
+}
+
+.pose {
+  margin: variables.$pm-base * 4;
+
+  &__image {
+    width: 9.375rem;
+    height: 9.375rem;
+    border-radius: 4px;
+  }
+
+  &__name {
+    text-align: center;
+  }
+
+  &__intro {
+    @include mixin.flexbox(row, space-around, center);
+  }
+
+  &__description {
+    color: variables.$secondary-black;
+    text-align: center;
+  }
+}

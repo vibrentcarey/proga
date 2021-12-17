@@ -3,15 +3,7 @@
 @use "../../styles/partials/global";
 
 .main {
-  margin: 0;
-  width: 100%;
-  height: 100vh;
   background-image: url("../../assets/images/yoga-shaddow.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: rgba(251, 247, 247, 0.626);
-  background-blend-mode: multiply lighten;
   position: relative;
   @include mixin.flexbox(row, center, center);
 
