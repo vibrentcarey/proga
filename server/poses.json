@@ -8,18 +8,42 @@
     "level": "Beginner"
   },
   {
-    "name": "Cat Cow",
+    "name": "cobra",
     "description": "Back stretch .....",
     "bodyPart": "back",
-    "id": "1",
+    "id": "2",
     "image": "",
     "level": "Beginner"
   },
   {
-    "name": "Cat Cow",
+    "name": "triangle",
     "description": "Back stretch .....",
     "bodyPart": "back",
-    "id": "1",
+    "id": "3",
+    "image": "",
+    "level": "Beginner"
+  },
+  {
+    "name": "butterfly",
+    "description": "Back stretch .....",
+    "bodyPart": "back",
+    "id": "4",
+    "image": "",
+    "level": "Beginner"
+  },
+  {
+    "name": "bridge",
+    "description": "Back stretch .....",
+    "bodyPart": "back",
+    "id": "5",
+    "image": "",
+    "level": "Beginner"
+  },
+  {
+    "name": "chair",
+    "description": "Back stretch .....",
+    "bodyPart": "back",
+    "id": "6",
     "image": "",
     "level": "Beginner"
   }
