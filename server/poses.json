@@ -10,7 +10,7 @@
   {
     "name": "cobra",
     "description": "Back stretch .....",
-    "bodyPart": "back",
+    "bodyPart": ["back"],
     "id": "2",
     "image": "",
     "level": "Beginner"
@@ -18,7 +18,7 @@
   {
     "name": "triangle",
     "description": "Back stretch .....",
-    "bodyPart": "back",
+    "bodyPart": ["legs", "back"],
     "id": "3",
     "image": "",
     "level": "Beginner"
@@ -26,7 +26,7 @@
   {
     "name": "butterfly",
     "description": "Back stretch .....",
-    "bodyPart": "back",
+    "bodyPart": ["legs"],
     "id": "4",
     "image": "",
     "level": "Beginner"
@@ -34,7 +34,7 @@
   {
     "name": "bridge",
     "description": "Back stretch .....",
-    "bodyPart": "back",
+    "bodyPart": ["back"],
     "id": "5",
     "image": "",
     "level": "Beginner"
@@ -42,7 +42,7 @@
   {
     "name": "chair",
     "description": "Back stretch .....",
-    "bodyPart": "back",
+    "bodyPart": ["legs", "back"],
     "id": "6",
     "image": "",
     "level": "Beginner"
