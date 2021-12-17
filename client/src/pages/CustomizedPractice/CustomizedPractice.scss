@@ -46,3 +46,7 @@
     padding-bottom: variables.$pm-base * 4;
   }
 }
+
+.carousel {
+  @include mixin.flexbox(column, center, center);
+}

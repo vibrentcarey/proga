@@ -3,7 +3,8 @@
 @use "../../styles/partials/mixin";
 
 .carousel {
-  width: 60%;
+  width: 80%;
+  margin: 0 auto;
 
   &__controls {
     @include mixin.flexbox(row, space-around, center);
@@ -13,5 +14,28 @@
   &__image {
     width: 200px;
     border-radius: 5px;
+  }
+
+ 
+}
+.carousel__button{
+  margin: 0 auto;
+}
+.audio{
+  width: 100px;
+  height: 20px;
+  color: transparent;
+}
+
+.top{
+  @include mixin.flexbox(row, center, center);
+  width: 90%;
+}
+
+.time{
+  margin: 0 0.4rem;
+  &:hover{
+    cursor: pointer;
+    opacity: 0.7;
   }
 }

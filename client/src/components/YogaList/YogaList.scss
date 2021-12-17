@@ -24,7 +24,12 @@
   }
 
   &__intro {
-    @include mixin.flexbox(row, space-around, center);
+    @include mixin.flexbox(column, center, center);
+
+    &__body{
+      // margin: .2rem;
+      line-height: 1.4rem;
+    }
   }
 
   &__description {

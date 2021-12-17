@@ -2,12 +2,17 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { Component, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ReactAudioPlayer from 'react-audio-player';
 import "./YogaCarousel.scss";
+import Modal from "../Modal/Modal";
+import music from '../../assets/music.mp3'
 
 const baseURL = "http://localhost:8080";
 
 function YogaCarousel(props) {
   const [isRunning, setIsRunning] = useState(true);
+  const [showModal, setshowModal] = useState(false)
+  const [interval, setInterval] = useState(5000)
   let history = useNavigate();
 
   const newPoses = [];
@@ -25,21 +30,40 @@ function YogaCarousel(props) {
     if (index === newPoses.length - 1) {
       setIsRunning(false);
       setTimeout(() => {
-        history("/");
-      }, 2000);
+        setshowModal(true)
+        setTimeout(() => {
+          history("/");
+        }, 5000)
+      }, 1000);
     }
   };
   return (
-    <Carousel autoPlay={isRunning} interval={1000} onChange={handleSlideChange} className="carousel">
-      {newPoses.map((pose) => {
-        return (
-          <div key={pose.id}>
-            <img className="carousel__image" src={`${baseURL}/${pose.image}`} alt={pose.name} />
-            <p className="legend">{pose.name}</p>
+    <>
+      {showModal && <Modal />}
+      {!showModal &&
+        <>
+          <div className="top">
+            <button className="carousel__button" onClick={() => setIsRunning(!isRunning)}>{isRunning ? 'Disable Autoplay' : 'Enable Autoplay'}</button>
+            <ReactAudioPlayer
+              src={music}
+              autoPlay
+              controls
+              className="audio"
+            />
+            <span className="time" onClick={() => setInterval(20000)}>20s</span> <span className="time" onClick={() => setInterval(30000)}>30s</span>
           </div>
-        );
-      })}
-    </Carousel>
+
+          <Carousel autoPlay={isRunning} interval={interval} onChange={handleSlideChange} className="carousel">
+            {newPoses.map((pose) => {
+              return (
+                <div key={pose.id}>
+                  <img className="carousel__image" src={`${baseURL}/${pose.image}`} alt={pose.name} />
+                  <p className="legend">{pose.name}</p>
+                </div>
+              );
+            })}
+          </Carousel> </>}
+    </>
   );
 }
 export default YogaCarousel;

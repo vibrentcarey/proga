@@ -17,9 +17,9 @@ function YogaList(props) {
             <h3 className="pose__name">{pose.name}</h3>
             <div className="pose__intro">
               {pose.bodyPart.map((part, index) => (
-                <span key={`${part}-${index}`}>{part}</span>
+                <p className="pose__intro__body" key={`${part}-${index}`}>{part}</p>
               ))}
-              <span>{pose.level}</span>
+              <p>{pose.level}</p>
             </div>
             {/*    <p className="pose__description">{pose.description}</p> */}
           </article>
