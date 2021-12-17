@@ -1,4 +1,3 @@
-import example from "../../assets/images/example.jpeg";
 import Card from "../Card/Card";
 import "./YogaList.scss";
 

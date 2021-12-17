@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import YogaCarousel from "../../components/YogaCarousel/YogaCarousel";
 import YogaList from "../../components/YogaList/YogaList";
-// import { getRandomRec } from "../../utitilies/apiRequests";
 import "./RecommendedPractice.scss";
 import axios from "axios";
+import HomeIcon from "../../components/HomeIcon/HomeIcon";
+
 const baseURL = "http://localhost:8080";
 
 const RecommendedPractice = () => {
@@ -27,6 +29,9 @@ const RecommendedPractice = () => {
 
   return (
     <main className="box">
+      <Link to="/">
+        <HomeIcon className="home-link" />
+      </Link>
       {/*     {!hasData && <h1>Loading</h1>} */}
       {!isPracticing && (
         <section className="overview">
@@ -37,7 +42,7 @@ const RecommendedPractice = () => {
         </section>
       )}
       {isPracticing && (
-        <section>
+        <section className="carousel">
           <YogaCarousel practiceList={data} />
         </section>
       )}
