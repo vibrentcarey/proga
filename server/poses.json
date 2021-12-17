@@ -46,17 +46,6 @@
     "repeat": "true"
   },
   {
-    "name": "chair",
-    "description": "Back stretch .....",
-    "bodyPart": [
-      "legs",
-      "back"
-    ],
-    "id": "6",
-    "image": "",
-    "level": "beginner"
-  },
-  {
     "name": "Down Dog",
     "description": "Back stretch .....",
     "bodyPart": [
