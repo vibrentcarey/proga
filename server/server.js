@@ -1,30 +1,39 @@
-const express = require('express');
-const cors = require('cors');
-const fs = require('fs');
-const { removeDuplicates, generateRandomArray } = require('./utility');
+const express = require("express");
+const cors = require("cors");
+const fs = require("fs");
+const { removeDuplicates, generateRandomArray } = require("./utility");
 
 const app = express();
 app.use(express.json());
 app.use(cors());
-app.use(express.static('public'));
+app.use(express.static("public"));
 
-app.get('/', (_, res) => {
-  const poses = JSON.parse(fs.readFileSync('./poses.json'));
+app.get("/", (_, res) => {
+  const poses = JSON.parse(fs.readFileSync("./poses.json"));
   const randomPoses = generateRandomArray(poses);
   const uniquePoses = removeDuplicates(randomPoses);
   res.status(200).json(uniquePoses);
-})
+});
 
-app.post('/specific', (req, res) => {
+app.post("/specific", (req, res) => {
   const bodyPart = req.body.bodyPart;
   const level = req.body.level;
-  const poses = JSON.parse(fs.readFileSync('./poses.json'));
-  const filteredPoses = poses.filter(pose => pose.bodyPart.includes(bodyPart) && pose.level === level);
+  const poses = JSON.parse(fs.readFileSync("./poses.json"));
+  //
+  let filteredPoses;
+  bodyPart.forEach((item) => {
+    filteredPoses = poses.filter(
+      (pose) => pose.bodyPart.includes(item) && pose.level === level
+    );
+  });
+  console.log(filteredPoses);
+  //
+  //const filteredPoses = poses.filter(pose => pose.bodyPart.includes(bodyPart) && pose.level === level);
   const randomPoses = generateRandomArray(filteredPoses);
   const uniquePoses = removeDuplicates(randomPoses);
-  res.status(200).json(uniquePoses)
-})
+  res.status(200).json(uniquePoses);
+});
 
 app.listen(8080, () => {
-  console.log('Listening on 8080');
-})
+  console.log("Listening on 8080");
+});

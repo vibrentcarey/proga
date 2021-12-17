@@ -15,7 +15,7 @@ function CustomizedPractice() {
   const [isPracticing, setIsPractice] = useState(false);
   const [Data, setData] = useState([]);
   const [checkboxData, setCheckboxData] = useState([
-    { id: 100, name: "back", isChecked: true },
+    { id: 100, name: "back", isChecked: false },
     { id: 200, name: "legs", isChecked: false },
     { id: 300, name: "upper", isChecked: false },
   ]);
@@ -37,14 +37,17 @@ function CustomizedPractice() {
         neededCheckboxValue.push(item.name);
       }
     });
+    //console.log(neededCheckboxValue);
 
-    console.log(e.target.level.value, checkboxValue);
     axios
       .post(`${baseURL}/specific`, {
-        level: e.target,
+        level: e.target.level.value,
         bodyPart: neededCheckboxValue,
       })
-      .then((res) => setData(res.data))
+      .then((res) => {
+        console.log(res.data);
+        setData(res.data);
+      })
       .catch((e) => console.log(e));
     setIsChoosingPractice(false);
     setIsStarting(true);
@@ -87,7 +90,7 @@ function CustomizedPractice() {
               </label>
               <select id="level">
                 <option value="beginner">Beginner</option>
-                <option value="advance">Advance</option>
+                <option value="advanced">Advance</option>
               </select>
             </div>
             <button className="cus-form__btn">Customize</button>
