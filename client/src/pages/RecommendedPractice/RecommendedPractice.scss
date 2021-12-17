@@ -5,6 +5,7 @@
 .box {
   background-image: url("../../assets/images/flower.jpg");
   padding: variables.$pm-base * 8 0;
+<<<<<<< HEAD
   position: relative;
 }
 
@@ -12,16 +13,28 @@
   position: absolute;
   top: variables.$pm-base * 4;
   left: variables.$pm-base * 4;
+=======
+
+  &__section {
+    @include mixin.flexbox(row, center, center);
+    width: 100%;
+  }
+>>>>>>> main
 }
 
 .overview {
   @include mixin.flexbox(column, flex-start, center);
+
   &__btn {
     padding-bottom: variables.$pm-base * 4;
     color: variables.$primary-white;
   }
+<<<<<<< HEAD
 }
 
 .carousel {
   margin-top: variables.$pm-base * 4;
 }
+=======
+}
+>>>>>>> main
