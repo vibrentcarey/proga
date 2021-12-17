@@ -1,10 +1,50 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import { Component } from "react";
-import example from "../../assets/images/example.jpeg";
+import { Component, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./YogaCarousel.scss";
 
-class YogaCarousel extends Component {
+const baseURL = "http://localhost:8080";
+
+function YogaCarousel(props) {
+  const [isRunning, setIsRunning] = useState(true);
+  let history = useNavigate();
+
+  const newPoses = [];
+  props.practiceList.forEach((pose) => {
+    if (pose.repeat) {
+      newPoses.push(pose);
+      newPoses.push(pose);
+    } else {
+      newPoses.push(pose);
+    }
+  });
+
+  const handleSlideChange = (index) => {
+    console.log(index);
+    if (index === newPoses.length - 1) {
+      setIsRunning(false);
+      setTimeout(() => {
+        history("/");
+      }, 2000);
+    }
+  };
+  return (
+    <Carousel autoPlay={isRunning} interval={1000} onChange={handleSlideChange}>
+      {newPoses.map((pose) => {
+        return (
+          <div key={pose.id}>
+            <img src={`${baseURL}/${pose.image}`} />
+            <p className="legend">{pose.name}</p>
+          </div>
+        );
+      })}
+    </Carousel>
+  );
+}
+export default YogaCarousel;
+
+/* class YogaCarousel extends Component {
   constructor(props) {
     super(props);
 
@@ -41,9 +81,14 @@ class YogaCarousel extends Component {
         currentSlide: index,
       });
     }
+
+     if (index === this.props.practiceList.length - 1) {
+      history("/");
+    }
   };
 
   render() {
+    console.log(this.props);
     return (
       <div className="carousel">
         <div className="carousel__controls">
@@ -62,7 +107,7 @@ class YogaCarousel extends Component {
           {this.props.practiceList.map((pose) => {
             return (
               <div key={pose.id}>
-                <img src={example} />
+                <img src={`${baseURL}/${pose.image}`} />
                 <p className="legend">{pose.name}</p>
               </div>
             );
@@ -73,19 +118,4 @@ class YogaCarousel extends Component {
   }
 }
 
-export default YogaCarousel;
-/* function YogaCarousel(props) {
-  return (
-    <Carousel>
-      {props.practiceList.map((pose) => {
-        return (
-          <div key={pose.id}>
-            <img src={example} />
-            <p className="legend">{pose.name}</p>
-          </div>
-        );
-      })}
-    </Carousel>
-  );
-} 
-export default YogaCarousel;*/
+export default YogaCarousel; */
