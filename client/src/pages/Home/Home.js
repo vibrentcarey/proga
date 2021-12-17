@@ -11,10 +11,10 @@ const home = () => {
       </h2>
       <div className="main__choices">
         <Link to="/customizedpractice">
-          <button className="customize">Customized Practice</button>
+          <button className="customize">Customization</button>
         </Link>
-        <Link to="/recommendpractice" className="recommend">
-          <button>Recommended Practice</button>
+        <Link to="/recommendedpractice" className="recommend">
+          <button>Recommendation</button>
         </Link>
       </div>
     </main>

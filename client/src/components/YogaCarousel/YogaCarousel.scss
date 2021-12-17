@@ -1,0 +1,10 @@
+@use "../../styles/partials/variables";
+@use "../../styles/partials/global";
+@use "../../styles/partials/mixin";
+
+.carousel {
+  &__controls {
+    @include mixin.flexbox(row, space-around, center);
+    margin-bottom: variables.$pm-base * 2;
+  }
+}

@@ -5,6 +5,8 @@
 .pose-container {
   margin: 0 auto;
   width: 90%;
+  height: 75vh;
+  overflow: scroll;
   @include mixin.flexbox(column, flex-start, center);
 }
 

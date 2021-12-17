@@ -2,6 +2,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { Component } from "react";
 import example from "../../assets/images/example.jpeg";
+import "./YogaCarousel.scss";
 
 class YogaCarousel extends Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class YogaCarousel extends Component {
 
     this.state = {
       currentSlide: 0,
-      autoPlay: true,
+      autoPlay: false,
       interval: 1000,
     };
   }
@@ -44,12 +45,12 @@ class YogaCarousel extends Component {
 
   render() {
     return (
-      <div>
-        <div>
+      <div className="carousel">
+        <div className="carousel__controls">
           <button onClick={this.prev}>Prev</button>
           <button onClick={this.next}>Next</button>
           <button onClick={this.changeAutoPlay}>
-            Toggle Autoplay ({this.state.autoPlay ? "true" : "false"})
+            Autoplay ({this.state.autoPlay ? "Yes" : "No"})
           </button>
         </div>
         <Carousel

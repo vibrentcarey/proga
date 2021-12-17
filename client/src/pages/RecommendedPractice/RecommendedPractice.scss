@@ -1,0 +1,16 @@
+@use "../../styles/partials/variables";
+@use "../../styles/partials/global";
+@use "../../styles/partials/mixin";
+
+.box {
+  background-image: url("../../assets/images/flower.jpg");
+  padding: variables.$pm-base * 8 0;
+}
+
+.overview {
+  @include mixin.flexbox(column, flex-start, center);
+  &__btn {
+    padding-bottom: variables.$pm-base * 4;
+    color: variables.$primary-white;
+  }
+}

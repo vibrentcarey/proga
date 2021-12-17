@@ -9,8 +9,10 @@
 
 .form-card {
   width: 90%;
+  height: 70vh;
   margin: 0 auto;
-  padding: variables.$pm-base * 8 variables.$pm-base * 4;
+  margin-top: variables.$pm-base * 8;
+  padding: variables.$pm-base * 16 variables.$pm-base * 4;
 }
 
 .cus-form {
@@ -30,7 +32,7 @@
   &__btn {
     color: variables.$primary-black;
     margin: 0 auto;
-    margin-top: variables.$pm-base * 6;
+    margin-top: variables.$pm-base * 16;
     &:hover,
     &:active {
       color: variables.$secondary-black;

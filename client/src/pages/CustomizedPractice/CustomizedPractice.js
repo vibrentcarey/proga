@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import YogaList from "../../components/YogaList/YogaList";
-import YogaCarousel from "../YogaCarousel/YogaCarousel";
+import YogaCarousel from "../../components/YogaCarousel/YogaCarousel";
 import Card from "../../components/Card/Card";
 import "./CustomizedPractice.scss";
 
