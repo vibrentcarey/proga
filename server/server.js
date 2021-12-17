@@ -26,7 +26,6 @@ app.post("/specific", (req, res) => {
       (pose) => pose.bodyPart.includes(item) && pose.level === level
     );
   });
-  console.log(filteredPoses);
   //
   //const filteredPoses = poses.filter(pose => pose.bodyPart.includes(bodyPart) && pose.level === level);
   const randomPoses = generateRandomArray(filteredPoses);
