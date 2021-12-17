@@ -1,5 +1,6 @@
 @use "../../styles/partials/mixin";
 @use "../../styles/partials/variables";
+@use "../../styles/partials/global";
 
 .main {
   margin: 0;
@@ -23,8 +24,14 @@
   &__title {
     color: variables.$primary-white;
     position: absolute;
+    width: 80%;
     bottom: 10%;
     margin: 0 variables.$pm-base * 4;
     text-align: center;
+  }
+
+  &__choices {
+    position: absolute;
+    bottom: 2%;
   }
 }

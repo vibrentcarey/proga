@@ -17,3 +17,15 @@ a {
   text-decoration: none;
   color: variables.$primary-black;
 }
+
+button {
+  background-color: transparent;
+  border-color: transparent;
+  color: variables.$primary-silver;
+
+  &:hover,
+  &:active {
+    cursor: pointer;
+    color: variables.$secondary-mercury;
+  }
+}

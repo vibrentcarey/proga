@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import Practice from "./pages/Practice";
+import CustomizedPractice from "./pages/CustomizedPractice/CustomizedPractice";
 
 // use react-router  v6, syntax is a little different
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" exact element={<Home />} />
-        <Route path="/practice" element={<Practice />} />
+        <Route path="/customizedpractice" element={<CustomizedPractice />} />
         <Route path="*" element={<Navigate replace to="/" />} />
       </Routes>
     </BrowserRouter>
