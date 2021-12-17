@@ -46,16 +46,6 @@
     "repeat": "true"
   },
   {
-    "name": "bridge",
-    "description": "Back stretch .....",
-    "bodyPart": [
-      "back"
-    ],
-    "id": "5",
-    "image": "",
-    "level": "advanced"
-  },
-  {
     "name": "chair",
     "description": "Back stretch .....",
     "bodyPart": [
